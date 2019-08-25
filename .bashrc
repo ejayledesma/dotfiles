@@ -57,7 +57,9 @@ if [ -n "$force_color_prompt" ]; then
 fi
 
 if [ "$color_prompt" = yes ]; then
-    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
+    #PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
+    #PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u:\[\033[01;34m\]\w\[\033[00m\]\$ '
+    PS1="[\e[2;31m\t\e[m \e[2;36m\u\e[m \e[2;32m\w\e[m]\n>> "
 else
     PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
 fi
@@ -91,6 +93,25 @@ fi
 alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
+
+# tmux
+alias tmux="tmux -u"
+alias tnew="tmux new -s"
+alias tat="tmux a -t"
+
+# Directory navigation
+alias ..="cd .."
+alias ..2="cd ../.."
+alias ..3="cd ../../.."
+alias ..4="cd ../../../.."
+alias ..5="cd ../../../../.."
+alias cd..='cd ..'
+
+# To easily empty a file
+alias empty='cat /dev/null >'
+
+# To add date and time to your history
+export HISTTIMEFORMAT="%d/%m/%y %T "
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
