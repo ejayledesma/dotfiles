@@ -94,6 +94,13 @@ alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
 
+# More user-friendly
+# alias ll="ls -alh --color=auto"
+alias ty="cat"
+alias tdir="ll -t -r"
+alias lo="logout"
+alias cls="clear"
+
 # tmux
 alias tmux="tmux -u"
 alias tnew="tmux new -s"
