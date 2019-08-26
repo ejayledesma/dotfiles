@@ -98,7 +98,7 @@ alias l='ls -CF'
 # alias ll="ls -alh --color=auto"
 alias ty="cat"
 alias tdir="ll -t -r"
-alias lo="logout"
+alias lo="exit"
 alias cls="clear"
 
 # tmux
