@@ -77,4 +77,3 @@ alias empty='cat /dev/null >'
 
 # To add date and time to your history
 export HISTTIMEFORMAT="%d/%m/%y %T "
-export GPG_TTY=$(tty)
