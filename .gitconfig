@@ -1,5 +1,8 @@
 [user]
 	name = Ejay Ledesma
-	email = ejayledesma@gmail.com
+	email = 12439358+ejayledesma@users.noreply.github.com
 [core]
 	editor = vim
+[alias]
+	treelog = log --graph --oneline
+	treelogall = log --all --graph --oneline

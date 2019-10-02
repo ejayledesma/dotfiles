@@ -39,7 +39,7 @@ fi
 PS1="[\e[2;31m\t\e[m \e[2;36m\u\e[m \e[2;32m\w\e[m]\n>> "
 
 # Disable XOFF (ctrl+s) from Ruining Everything.
-stty -ixon
+#stty -ixon
 
 # More user-friendly
 #alias ll="ls -al --color=auto"
@@ -47,7 +47,6 @@ alias dirsize="du -sh"
 
 alias emacs="emacs -rv"
 alias lsd="ls -harlS"
-alias rls="while true; do clear; rakelog summary; sleep 30; done"
 
 
 # More user-friendly
@@ -56,7 +55,6 @@ alias ty="cat"
 alias tdir="ll -t -r"
 alias lo="logout"
 alias cls="clear"
-alias tt2="set term/inquire"
 
 # tmux
 alias tmux="tmux -u"
