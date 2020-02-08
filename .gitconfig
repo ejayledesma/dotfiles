@@ -4,5 +4,4 @@
 [core]
 	editor = vim
 [alias]
-	treelog = log --graph --oneline
-	treelogall = log --all --graph --oneline
+	tlog = log --all --graph --oneline
