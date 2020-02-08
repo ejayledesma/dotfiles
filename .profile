@@ -26,14 +26,9 @@ if [ -d "$HOME/.local/bin" ] ; then
     PATH="$HOME/.local/bin:$PATH"
 fi
 
-# get git branch
-get_git_branch() {
- git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
-}
-
 # Set up an awesome prompt
 #PS1="\n\e[2;35m[ \e[2;32m\d \t \e[2;35m| \e[2;33m\u\e[2;35m@\e[2;33m\h\e[m:\e[2;32m\w\e[m\e[2;35m ]\n\e[2;33m>> \e[1;37m"
-PS1="[\e[2;31m\t\e[m \e[2;36m\u\e[m \e[2;32m\w\e[m]$(get_git_branch)\n>> "
+PS1='[\e[2;31m\t\e[m \e[2;36m\u\e[m \e[2;32m\w\e[m]$(__git_ps1)\n>> '
 
 # Disable XOFF (ctrl+s) from Ruining Everything.
 #stty -ixon
