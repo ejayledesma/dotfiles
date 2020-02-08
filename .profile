@@ -26,17 +26,14 @@ if [ -d "$HOME/.local/bin" ] ; then
     PATH="$HOME/.local/bin:$PATH"
 fi
 
+# get git branch
+get_git_branch() {
+ git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
+}
+
 # Set up an awesome prompt
-
-# Stef's pretty prompt
 #PS1="\n\e[2;35m[ \e[2;32m\d \t \e[2;35m| \e[2;33m\u\e[2;35m@\e[2;33m\h\e[m:\e[2;32m\w\e[m\e[2;35m ]\n\e[2;33m>> \e[1;37m"
-
-# Simple prompt
-#PS1='\[\033[31;1m\u\[\033[0m@\[\033[34;1m\h\[\033[0m [\t] \[\033[37m\w\[\033[0m/ > '
-
-# Jason's prompt
-#PS1="[\t \h:\w] "
-PS1="[\e[2;31m\t\e[m \e[2;36m\u\e[m \e[2;32m\w\e[m]\n>> "
+PS1="[\e[2;31m\t\e[m \e[2;36m\u\e[m \e[2;32m\w\e[m]$(get_git_branch)\n>> "
 
 # Disable XOFF (ctrl+s) from Ruining Everything.
 #stty -ixon
@@ -75,3 +72,6 @@ alias empty='cat /dev/null >'
 
 # To add date and time to your history
 export HISTTIMEFORMAT="%d/%m/%y %T "
+
+export GPG_TTY=$(tty)
+export PATH=/home/ejayledesma/.yarn/bin:$PATH
