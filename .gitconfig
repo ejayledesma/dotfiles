@@ -1,7 +1,10 @@
 [user]
-	name = Ejay Ledesma
-	email = 12439358+ejayledesma@users.noreply.github.com
+  name = Ejay Ledesma
+  email = 12439358+ejayledesma@users.noreply.github.com
+  signingkey = 4A4DDEEB9AA53680
 [core]
-	editor = vim
+  editor = vim
 [alias]
-	tlog = log --all --graph --oneline
+  tlog = log --all --graph --oneline
+  co = checkout
+  csm = commit -S -m
