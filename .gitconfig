@@ -1,10 +1,19 @@
 [user]
-  name = Ejay Ledesma
-  email = 12439358+ejayledesma@users.noreply.github.com
-  signingkey = ADDF07821E645D45
-[core]
-  editor = vim
+	name = Ejay Ledesma
+	email = 12439358+ejayledesma@users.noreply.github.com
 [alias]
-  tlog = log --all --graph --oneline
-  co = checkout
-  csm = commit -S -m
+	tlog = log --all --graph --oneline
+	a = add
+	br = branch
+	co = checkout
+	cob = checkout -b
+	s = status
+	rv = remote -v
+	d = diff
+	ds = diff
+	dv = difftool -t vimdiff -y
+	dsv = difftool --staged -t vimdiff -y
+	cm = commit -m
+	gl = config --global --list
+[core]
+	editor = vim
